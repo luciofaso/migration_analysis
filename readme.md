@@ -4,8 +4,8 @@ Analysis of Migration Data, inference of relationships with other variables.
 ---
 This repository contains:
 
-* Exploratory Data Analysis of emigration and the socio-economic data of the WB indicators, <br> at [EmigrationEDA.ipynb](https://github.com/luciofaso)
-* A stochastic model that quantify the relationship between emigration and the WB indicators, <br> at [EmigrationModel.ipynb](https://github.com/luciofaso)
+* Exploratory Data Analysis of emigration and the socio-economic data of the WB indicators, <br> at [EmigrationEDA.ipynb](https://github.com/luciofaso/migration_analysis/blob/master/EmigrationEDA.ipynb)
+* A stochastic model that quantify the relationship between emigration and the WB indicators, <br> at [EmigrationModel.ipynb](https://github.com/luciofaso/migration_analysis/blob/master/EmigrationModel.ipynb)
 
 
 ## Authors
@@ -13,7 +13,7 @@ This repository contains:
 
 ## Data Availability
 * Data of international migration can be get [here](http://databank.worldbank.org/data/reports.aspx?source=global-bilateral-migration)
-* Socio-economic indicators gathered by the World Bank (WB) can be get [here] (), or [here](https://www.kaggle.com/worldbank/world-development-indicators/version/2#Indicators.csv)
+* Socio-economic indicators gathered by the World Bank (WB) can be get at the [DataBank of the World Bank](http://databank.worldbank.org/data/source/world-development-indicators#), or from [Kaggle's datasets](https://www.kaggle.com/worldbank/world-development-indicators/version/2#Indicators.csv)
 
 
 ## License
