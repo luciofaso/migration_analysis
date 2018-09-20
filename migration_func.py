@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import copy
 
 def select_years (df:pd.DataFrame, column_dates:str, years:list):
     """" Select the years from a larger datasests """
@@ -60,3 +61,22 @@ def sel_regressor(df:pd.DataFrame, col_target:str):
 
 
 
+def single_factor_plot (name_factor:str, X:np.ndarray, y:np.ndarray, input_names:list, model):
+    """ Plot effect of single factor on model output"""
+
+    pos_factor = np.where(input_names==name_factor)[0][0]
+    X_factor = X[:,pos_factor]
+    X_partial = copy.deepcopy(X)
+    X_partial[:,pos_factor] = np.mean(X_factor)
+    y_partial = model.predict(X_partial)
+    best_score = model.score(X, y)
+    loss_score = best_score - model.score(X_partial, y)
+    err = y - y_partial
+    
+    #data preparation
+    data4plt =pd.DataFrame(np.transpose(np.array([X_factor,err])),columns=[name_factor,'Effect on model output'])
+    
+    # plotting
+    sns_plt1 = sns.lmplot(data=data4plt,x=name_factor,y='Effect on model output')
+    fig = sns_plt1.fig
+    fig.suptitle('Influence of single factor, $R^2$: ' + str(loss_score)[0:6])    
