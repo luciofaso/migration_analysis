@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import copy
+import seaborn as sns
 
 def select_years (df:pd.DataFrame, column_dates:str, years:list):
     """" Select the years from a larger datasests """
